@@ -24,19 +24,256 @@
   --font-principal: 'Raleway', sans-serif;
 }
 
-body {
-  font-family: var(--font-principal);
-  font-size: var(--body-mobile)
-}
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+body {
+  font-family: var(--font-principal);
+  font-size: var(--body-mobile)
+}
+
+h1, h2 {
+  font-size: var(--size-title-mobile);
+  font-family: var(--font-secondary);
+}
+
+h5 {
+  font-size: var(--size-subtitle-mobile)
+}
+
+/* navbar section */
+
+nav.navbar {
+  background-color: var(--primary-black);
+  color: var(--white);
+}
+nav.navbar .navbar-nav .nav-link, nav.navbar .navbar-nav .nav-link.active {
+  color: var(--white);
+}
+nav.navbar .navbar-nav .fas {
+  font-size: 20px;
+  color: var(--dark-cream);
+}
+
+nav.navbar .btn-primary {
+  border: 2px solid var(--dark-cream);
+  background-color: var(--primary-black);
+  padding: 0.2rem 2rem;
+  border-radius: 8px;
+}
+
+/* header section */
+
+.header {
+  background-image: url('../assets/images/backgounds/coffee-hero-mobile.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  background-attachment: fixed;
+}
+.header .header-layer {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.header h1{
+  color: var(--white);
+}
+.header img.icon-line {
+  display: none;
+}
+.header .icon-arrow {
+  position: absolute;
+  bottom: calc(40vh - 100vh);
+  left: 45%; 
+}
+
+/* our-products section */
+.our-products {
+  background-color: var(--primary-cream);
+}
+
+.our-products  .our-products-wrapper {
+  position: relative;
+}
+
+.our-products .our-products-wrapper .wrapper-title {
+  background-color: var(--secondary-black);
+  border-radius: 0px 75px;
+  color: var(--primary-cream);
+  height: 120px;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+.our-products .our-products-wrapper .img-spoon {
+  position: absolute;
+  top: 75%;
+  width: 100%;
+}
+
+.card-product {
+  border-radius: 8px;
+  background-color: var(--secondary-cream);
+  padding: 8px;
+  max-width: 70%;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: all 0.8s ease;
+}
+
+.card-product:hover {
+  transform: scale(1.1);
+  filter: drop-shadow(0px 4px 50px rgba(0, 0, 0, 0.3));
+  box-shadow: none;
+}
+
+.card-product .card-img-top {
+  width: 170px;
+}
+.card-product .product-detail-price .btn-primary {
+  border-radius: 100px;
+  padding: 3px;
+  color: var(--primary-cream);
+  background-color: var(--secondary-black);
+  height: 35px;
+  border: none;
+}
+.card-product .product-detail-price p {
+  color: var(--secondary-black);
+  font-size: 24px;
+  margin: 0;
+}
+.card-product .product-detail-price .price-caption {
+  color: var(--dark-cream);
+  font-size: 15px;
+}
+.card-product .product-detail-description .card-title{
+  color: var(--secondary-black);
+}
+
+.card-product .product-detail-description .card-text {
+  color: var(--secondary-black)
+}
+
+
+/* contact us section */
+.contact-us {
+   background-image: url('../assets/images/backgounds/seed-mobile.jpg');
+   background-repeat: no-repeat;
+   background-position: center;
+   background-size: cover;
+   height: 100vh;
+   background-attachment: fixed;
+   position: relative;
+}
+
+.contact-us .contact-layer {
+  height: 100vh;
+  background-color: rgba(236, 206, 144, 0.71);
+}
+
+.contact-us .img-cup {
+  position: absolute;
+  top: -43px;
+  right: 0;
+}
+
+.contact-us .form-contact .btn-primary {
+  border: 2px solid var(--dark-cream);
+  background-color: var(--primary-black);
+  padding: 0.7rem 2rem;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.footer {
+  background-color: var(--primary-black);
+  color: var(--primary-cream);
+}
+
+.footer p {
+  margin: 2px;
+  font-size: var(--items-nav-footer);
+}
+
+.footer small {
+  color: var(--contrast-footer);
+}
+
+.footer .fab {
+  background: linear-gradient(214.91deg, #BF953F 43.21%, #FCF6BA 94.56%, #B38728 139.88%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
 /* Media queries */
 @media only screen and (min-width: 768px) {
   body {
     font-size: var(--body)
+  }
+  h1, h2 {
+    font-size: var(--size-title);
+  }
+  h5 {
+    font-size: var(--size-subtitle)
+  }
+
+  /* header section */
+  .header {
+    background-image: url('../assets/images/backgounds/coffee-hero.jpg');
+  }
+  .header img.icon-line {
+    display: block;
+  }
+
+  /* our-products sections */
+  .our-products .our-products-wrapper .img-spoon {
+    position: absolute;
+    top: 55%;
+    left: 4%;
+    width: 100%;
+  }
+
+  .card-product {
+    max-width: 300px;
+  }
+
+  /* contact us */
+  .contact-us {
+   background-image: url('../assets/images/backgounds/seed.jpg');
+  }
+  .contact-us .contact-layer {
+    height: 100vh;
+    background: linear-gradient(87.93deg, rgba(236, 206, 144, 0) 39.03%, #ECCE90 73.79%);
+  }
+  .contact-us .img-cup-desktop {
+    position: absolute;
+    top: 50%;
+    left: -24px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .our-products .our-products-wrapper .img-spoon {
+    position: absolute;
+    top: 35%;
+    left: 25%;
+    width: 80%;
+  }
+
+  .card-product {
+    max-width: 350px;
+  }
+  .card-product .card-img-top {
+    width: 200px;
+  }
+
+  .contact-us .img-cup-desktop {
+    position: absolute;
+    left: -32px;
   }
 }
