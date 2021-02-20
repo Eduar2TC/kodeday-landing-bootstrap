@@ -1,8 +1,42 @@
+/* custom properties */
+:root {
+  --primary-black: #222222; 
+  --primary-cream: #ECCE90;
+  --secondary-black: #332C22;
+  --secondary-cream: #D7BB8B;
+  --dark-cream: #A87A16;
+  --white: #FFFFFF;
+  --contrast-footer: #FCFCFC; 
+  --size-title: 40px;
+  --size-title-mobile: 30px;
+  --size-subtitle: 30px;
+  --size-subtitle-mobile: 25px;
+  --items-nav-footer: 16px;
+  --caption: 12px;
+  --body: 18px;
+  --body-mobile: 14px;
+  --card-unit: 24px;
+  --card-unit-mobile: 15px;
+  --card-price:32px;
+  --card-price-mobile:28px;
+  --button: 14px;
+  --font-secondary: 'Poiret One', cursive;
+  --font-principal: 'Raleway', sans-serif;
+}
+
 body {
-  font-family: 'Poiret One', cursive;
+  font-family: var(--font-principal);
+  font-size: var(--body-mobile)
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+
+/* Media queries */
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: var(--body)
+  }
 }
